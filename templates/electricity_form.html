@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style customizer-hide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../static/login_assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel = "icon" href = "../static/assets/img/mitlogo.png" type = "image/x-icon">
+    <title>MIT Hostels Grievance</title>
+
+    <meta name="description" content="" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../static/login_assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../static/login_assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../static/login_assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../static/login_assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../static/login_assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Page CSS -->
+    <!-- Page -->
+    <link rel="stylesheet" href="../static/login_assets/vendor/css/pages/page-auth.css" />
+    <!-- Helpers -->
+    <script src="../static/login_assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../static/login_assets/js/config.js"></script>
+
+
+    <!-- Template Main CSS File -->
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" style="position: sticky; background: #f5f5f9;">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="../static/assets/img/au_logo.png" alt="" style="width: 50px;">
+        <span>&nbsp;MIT HOSTELS</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+    <!-- Content -->
+
+    <div class="container-xxl">
+      <div class="authentication-wrapper authentication-basic container-p-y">
+        <div class="authentication-inner">
+          <!-- Register -->
+          <div class="card">
+            <div class="card-body">
+              <!-- /Logo -->
+              <h4 class="mb-2">Welcome to MIT Hostels! 👋</h4>
+              <p class="mb-4">Please sign-in to your account to explore !</p>
+
+              <form class="mb-3" action="/add_new_complain" method="POST">
+                <div class="mb-3">
+                  <label for="registerno" class="form-label">Register Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="registerno"
+                    name="registerno"
+                    placeholder="Enter your register number"
+                    autofocus
+                  />
+                </div>
+                <div class="mb-3">
+                    <label for="studentname" class="form-label">Student Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="studentname"
+                      name="studentname"
+                      placeholder="Enter your Name"
+                      autofocus
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="pnumber" class="form-label">Phone Number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="pnumber"
+                      name="pnumber"
+                      placeholder="Enter your Phone Number"
+                      autofocus
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="hblock" class="form-label">Hostel Block</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="hblock"
+                      name="hblock"
+                      placeholder="Enter your Hostel Name"
+                      autofocus
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="rnumber" class="form-label">Room Number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="rnumber"
+                      name="rnumber"
+                      placeholder="Enter your Room Number"
+                      autofocus
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="issuedetail" class="form-label">Issue in detail</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="issuedetail"
+                      name="issuedetail"
+                      placeholder="Enter your Issue"
+                      autofocus
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="issuefaced" class="form-label">Are You Already Faced This Issue</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="issuefaced"
+                      name="issuefaced"
+                      placeholder="Enter Yes or No"
+                      autofocus
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="atime" class="form-label">Availability Time</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="atime"
+                      name="atime"
+                      placeholder="Enter your Availability Time"
+                      autofocus
+                    />
+                  </div>
+              
+                  
+                <div class="mb-3">
+                  <input class="btn btn-primary d-grid w-100" type="submit" value="Complain">
+                </div>
+              </form>
+
+              
+            </div>
+          </div>
+          <!-- /Register -->
+        </div>
+      </div>
+    </div>
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="../static/assets/img/au_logo.png" alt="" style="width: 50px;">
+              <span>&nbsp;MIT HOSTEL</span>
+            </a>
+            <p>The vision of MIT Hostels is to provide best facilities for a safe and comfortable stay and to maintain a conducive environment for the students, where knowledge is shared, creativity is developed and fraternity exist in a cross cultural background, which in turn will help the students to excel in academics and management skills. </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Administration</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Rules & Regulations</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Hostels & Facilities</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">360 Virtual Tour</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              MIT Hostels<br>
+              Madras Institute of Technology (Campus)<br>
+              MIT Road, Radha Nagar, Chromepet<br>
+              Chennai-600044, Tamil Nadu, India.<br><br>
+              <strong>Phone:</strong> 044-22516118, 6119, 6120<br>
+              <strong>Email:</strong> mithostels@mitindia.edu<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MIT Hostels</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed on <a href="">2022</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+    <!-- Core JS -->
+    <!-- build:js static/login_assets/vendor/js/core.js -->
+    <script src="../static/login_assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../static/login_assets/vendor/libs/popper/popper.js"></script>
+    <script src="../static/login_assets/vendor/js/bootstrap.js"></script>
+    <script src="../static/login_assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../static/login_assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="../static/login_assets/js/main.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
