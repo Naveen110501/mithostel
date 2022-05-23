@@ -105,12 +105,16 @@
     <div class="container-xxl">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
+
+          {% if msg %}
+          <span class="s"><p>{{ msg }}</p></span> 
+      {% endif %}
           <!-- Register -->
           <div class="card">
             <div class="card-body">
               <!-- /Logo -->
-              <h4 class="mb-2">Welcome to MIT Hostels! 👋</h4>
-              <p class="mb-4">Please sign-in to your account to explore !</p>
+              <h4 class="mb-2"><center>Welcome to MIT Hostels! 👋</center></h4>
+              <p class="mb-4"><center>Please sign-in to your account to explore !</center></p>
 
               <form class="mb-3" action="/add_new_complain" method="POST">
                 <div class="mb-3">
@@ -148,14 +152,14 @@
                   </div>
                   <div class="mb-3">
                     <label for="hblock" class="form-label">Hostel Block</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="hblock"
-                      name="hblock"
-                      placeholder="Enter your Hostel Name"
-                      autofocus
-                    />
+                    <select id="cars" name="hblock" class="form-control" autofocus>
+                      <option value="Birla">Birla</option>
+                      <option value="Amaravathy">Amaravathy</option>
+                      <option value="Bhavani">Bhavani</option>
+                      <option value="Thamirabharani">Thamirabharani</option>
+                      <option value="Marutham">Marutham</option>
+                      <option value="Orchid International Boys">Orchid International Boys</option>
+                    </select>
                   </div>
                   <div class="mb-3">
                     <label for="rnumber" class="form-label">Room Number</label>
@@ -180,15 +184,16 @@
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="issuefaced" class="form-label">Are You Already Faced This Issue</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="issuefaced"
-                      name="issuefaced"
-                      placeholder="Enter Yes or No"
-                      autofocus
-                    />
+                    <label for="issuefaced" class="form-label">Choose the type of Issue</label>
+                    <select id="cars" name="issuefaced" class="form-control" autofocus>
+                      <option value="Fan">Fan</option>
+                      <option value="Light">Light</option>
+                      <option value="Hanger">Hanger</option>
+                      <option value="Table">Table</option>
+                      <option value="Bed">Bed</option>
+                      <option value="Door">Door</option>
+                      <option value="Switch">Switch</option>
+                    </select>
                   </div>
                   <div class="mb-3">
                     <label for="atime" class="form-label">Availability Time</label>

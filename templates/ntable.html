@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style customizer-hide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../static/login_assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel = "icon" href = "../static/assets/img/mitlogo.png" type = "image/x-icon">
+    <title>MIT Hostels Grievance</title>
+
+    <meta name="description" content="" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../static/login_assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../static/login_assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../static/login_assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../static/login_assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../static/login_assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Page CSS -->
+    <!-- Page -->
+    <link rel="stylesheet" href="../static/login_assets/vendor/css/pages/page-auth.css" />
+    <!-- Helpers -->
+    <script src="../static/login_assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../static/login_assets/js/config.js"></script>
+
+
+    <!-- Template Main CSS File -->
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+
+
+   
+
+       <!-- That -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+       <!-- That -->
+    
+  </head>
+
+  <body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" style="position: sticky; background: #f5f5f9;">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="../static/assets/img/au_logo.png" alt="" style="width: 50px;">
+        <span>MIT HOSTELS</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+        <!-- Register -->
+
+    <!-- Hoverable Table rows -->
+    <br><br><center>
+
+
+      <form action="get-all-complain" method="POST">
+        <div class="input-group">
+          
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="input-group-btn">
+              <select name="hblock" id="myselect" class="form-control">
+                <option selected>Hostel Block</option>
+                {% for row in block_data %}
+                <option>{{row['hblock']}}</option>
+                {% endfor %} 
+              </select>
+            </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+            <span class="input-group-btn">
+              <select name="issue" id="myselect" class="form-control">
+                <option selected>Issue</option>
+                {% for row in contact_data %}
+                <option>{{row['month']}}</option>
+                {% endfor %} 
+              </select>
+              </span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+              <span class="input-group-btn">
+                <select name="room" id="myselect" class="form-control">
+                  <option selected>Room Number</option>
+                  {% for row in year_data %}
+                  <option>{{row['year']}}</option>
+                  {% endfor %} 
+                </select>
+              </span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+              <span class="input-group-btn">
+               
+          <select name="status" id="myselect" class="form-control">
+            <option selected>Status</option>
+            {% for row in status_data %}
+            <option>{{row['month']}}</option>
+            {% endfor %} 
+          </select>
+              </span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+            
+          
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary">Filter</button>
+            </span>
+           
+          </div>
+        </form>
+
+
+
+<br>
+<br>
+<br>
+      
+
+        
+
+    <div class="card" style="width:1000px">
+      <h5 class="card-header">Hostel Complaint Entries</h5>
+      <div class="table-responsive text-nowrap">
+        <table class="table table-hover" >
+          <thead>
+            <tr>
+              <th>Register Number</th>
+              <th>Student Name</th>
+              <th>Phone Number</th>
+              <th>Hostel Block</th>
+              <th>Room Number</th>
+              <th>Issue Faced</th>
+              <th>Issue Detail</th>
+              
+              <th>Availability Time</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody class="table-border-bottom-0">
+            {% for row in rows_data %}
+            <tr>
+              <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{row['registerno']}}</strong></td>
+              <td> {{row['studentname']}}</td>
+              <td> {{row['pnumber']}}</td>
+              <td> {{row['hblock']}}</td>
+              <td> {{row['rnumber']}}</td>
+              <td><span class="badge bg-label-primary me-1">{{row['issuefaced']}}</span></td>    
+              <td> {{row['issuedetail']}}</td>
+                   
+              <td> {{row['atime']}}</td>
+             
+              <td><span class="badge bg-label-primary me-1">{{row['status']}}</span></td>  
+              <td>
+                <div class="dropdown">
+                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                    <i class="bx bx-dots-vertical-rounded"></i>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="vary-block/{{row['rnumber']}},{{row['issuefaced']}},{{row['registerno']}}"
+                      ><i class="bx bx-edit-alt me-1" ></i> Solved</a
+                    >
+      
+                  </div>
+                </div>
+              </td>
+            </tr>
+        
+          
+            {% endfor %} 
+          </tbody>
+        </table>
+      </div>
+    </div> 
+  </center><br><br>
+    <!--/ Hoverable Table rows -->
+
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="../static/assets/img/au_logo.png" alt="" style="width: 50px;">
+              <span>MIT HOSTEL</span>
+            </a>
+            <p>The vision of MIT Hostels is to provide best facilities for a safe and comfortable stay and to maintain a conducive environment for the students, where knowledge is shared, creativity is developed and fraternity exist in a cross cultural background, which in turn will help the students to excel in academics and management skills. </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Administration</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Rules & Regulations</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Hostels & Facilities</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">360 Virtual Tour</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              MIT Hostels<br>
+              Madras Institute of Technology (Campus)<br>
+              MIT Road, Radha Nagar, Chromepet<br>
+              Chennai-600044, Tamil Nadu, India.<br><br>
+              <strong>Phone:</strong> 044-22516118, 6119, 6120<br>
+              <strong>Email:</strong> mithostels@mitindia.edu<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MIT Hostels</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed on <a href="">2022</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+    <!-- Core JS -->
+    <!-- build:js static/login_assets/vendor/js/core.js -->
+    <script src="../static/login_assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../static/login_assets/vendor/libs/popper/popper.js"></script>
+    <script src="../static/login_assets/vendor/js/bootstrap.js"></script>
+    <script src="../static/login_assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../static/login_assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="../static/login_assets/js/main.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
